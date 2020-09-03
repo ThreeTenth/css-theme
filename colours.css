@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6, a {
   color: var(--fg-c);
 }
 
+h1.accent, h2.accent, h3.accent, h4.accent, h5.accent, h6.accent, a.accent {
+  color: var(--bg-c);
+}
+
 p, time, samp, var, kbd, mark, blockquote, code, label, footer, fieldset, details, details>summary {
   color: var(--text-c);
 }
@@ -67,7 +71,7 @@ button, input {
   border-color: var(--fg-c);
 }
 
-button.accent {
+button.accent, input.accent {
   background-color: var(--bg-c);
   color: var(--fg-c);
   border-color: var(--bg-c);
