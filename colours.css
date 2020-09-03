@@ -160,12 +160,12 @@ input:disabled, select:disabled, button:disabled, textarea:disabled {
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: var(--bg-c);
-  border-color: var(--fg-c);
+  background-color: var(--primary);
+  border-color: var(--white);
 }
 
 textarea::-webkit-scrollbar-track-piece {
-  background-color: var(--fg-c);
+  background-color: var(--white);
 }
 
 /* 主题 */
