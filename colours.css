@@ -1,0 +1,257 @@
+/* 定义颜色值 */
+
+:root {
+  --navy: #001F3F;
+  --aqua: #7FDBFF;
+  --teal: #39CCCC;
+  --olive: #3D9970;
+  --lime: #01FF70;
+  --fuchsia: #F012BE;
+  --purple: #B10DC9;
+  --maroon: #85144B;
+  --yellow: #FFDC00;
+  --green: #06847d;
+  --blue: #4a69bd;
+  --orange: #a46313;
+  --red: #e02e06;
+  --white: #ffffff;
+  --silver: #DDDDDD;
+  --grey: #e6e6e6;
+  --black: #262626;
+  --slider-s: 20px;
+  /* 变量 */
+  --primary: var(--blue);
+  --fg-c: var(--primary);
+  --bg-c: var(--white);
+  --text-c: var(--black);
+  --highlight: #00000010;
+}
+
+/* 上色 */
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  color: var(--fg-c);
+}
+
+p, time, samp, var, kbd, mark, blockquote, code, label, footer, fieldset, details, details>summary {
+  color: var(--text-c);
+}
+
+fieldset {
+  border-color:var(--fg-c);
+}
+
+fieldset>legend {
+  color: var(--fg-c);
+}
+
+mark, blockquote, code {
+  background-color: var(--highlight);
+}
+
+svg {
+  fill: currentColor;
+}
+
+input, details, details:active {
+  outline: none;
+}
+
+button, input {
+  background-color: var(--fg-c);
+  color: var(--bg-c);
+  border-color: var(--fg-c);
+}
+
+button.accent {
+  background-color: var(--bg-c);
+  color: var(--fg-c);
+  border-color: var(--bg-c);
+}
+
+input[type="date"], input[type="color"], input[type="checkbox"], input[type="radio"], input[type='range'], input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="color"], input[type="date"] {
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--fg-c);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  background-color: white;
+  border: 1px solid var(--fg-c);
+  width: var(--slider-s);
+  height: var(--slider-s);
+  position: relative;
+  min-width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  margin: 0;
+  margin-right: 2px;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+  background: var(--primary);
+}
+
+input[type="checkbox"]:checked::before {
+  display: flex;
+  justify-content: center;
+  content: "✔";
+  color: white;
+  font-size: .8rem;
+}
+
+input[type='range'] {
+  border-radius: 3px;
+  height: 8px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: var(--slider-s);
+  height: var(--slider-s);
+  cursor: ew-resize;
+  border-radius: 50%;
+  background: var(--fg-c);
+}
+
+input:disabled, select:disabled, button:disabled, textarea:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: var(--fg-c);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: var(--bg-c);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--bg-c);
+  /*滚动条的背景颜色*/
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  /*滚动条的宽度*/
+  height: 12px;
+  /*滚动条的高度*/
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--bg-c);
+  border-color: var(--fg-c);
+}
+
+textarea::-webkit-scrollbar-track-piece {
+  background-color: var(--fg-c);
+}
+
+/* 主题 */
+
+.default {
+  --primary: var(--blue);
+}
+
+.navy {
+  --primary: var(--navy);
+}
+
+.aqua {
+  --primary: var(--aqua);
+}
+
+.teal {
+  --primary: var(--teal);
+}
+
+.olive {
+  --primary: var(--olive);
+}
+
+.lime {
+  --primary: var(--lime);
+}
+
+.fuchsia {
+  --primary: var(--fuchsia);
+}
+
+.purple {
+  --primary: var(--purple);
+}
+
+.maroon {
+  --primary: var(--maroon);
+}
+
+.yellow {
+  --primary: var(--yellow);
+}
+
+.green {
+  --primary: var(--green);
+}
+
+.blue {
+  --primary: var(--blue);
+}
+
+.orange {
+  --primary: var(--orange);
+}
+
+.red {
+  --primary: var(--red);
+}
+
+.white {
+  --primary: var(--white);
+}
+
+.silver {
+  --primary: var(--silver);
+}
+
+.grey {
+  --primary: var(--grey);
+}
+
+.black {
+  --primary: var(--black);
+}
+
+/** 每添加一个主题，都要在这里追加一次*/
+.default, .navy, .aqua, .teal, .olive, .lime, .fuchsia, .purple, .maroon, .yellow, .green, .blue, .orange, .red, .white, .silver, .grey, .black {
+  --fg-c: var(--primary);
+  --bg-c: var(--white);
+  --text-c: var(--black);
+}
+
+.accent {
+  background: var(--bg-c);
+}
+
+/** 每添加一个主题，都要在这里追加一次*/
+.accent.default, .accent.navy, .accent.aqua, .accent.teal, .accent.olive, .accent.lime, .accent.fuchsia, .accent.purple, .accent.maroon, .accent.yellow, .accent.green, .accent.blue, .accent.red, .accent.orange, .accent.black, .accent.grey, .accent.silver {
+  --fg-c: var(--white);
+  --bg-c: var(--primary);
+  --text-c: var(--white);
+}

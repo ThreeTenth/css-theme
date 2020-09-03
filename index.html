@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <title>css-theme by ThreeTenth</title>
+  <meta name="author" content="mrmrs">
+  <meta name="description" content="A simple pure css theme style.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="dimens.css"> -->
+  <link rel="stylesheet" href="colours.css">
+
+  <style>
+    body div {
+      padding: 10px;
+    }
+
+    #css-theme {
+      position: fixed;
+      z-index: 40;
+      right: 0;
+      top: 0;
+    }
+
+    #css-theme div {
+      width: 100px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body class="navy">
+  <div id="css-theme">
+  </div>
+  <h1>css-theme</h1>
+  <h2>css-theme</h2>
+  <h3>css-theme</h3>
+  <h4>css-theme</h4>
+  <h5>css-theme</h5>
+  <h6>css-theme</h6>
+  <div>
+    <h3>P</h3>
+    <p>A simple pure css theme style.</p>
+  </div>
+  <div>
+    <h3>A</h3>
+    <a href="#">TEST</a>
+  </div>
+  <div>
+    <h3>BUTTON</h3>
+    <button>Good</button>
+    <button class="accent">Good</button>
+  </div>
+  <div>
+    <h3>BUTTON:DISABLED</h3>
+    <button disabled>invalid</button>
+  </div>
+  <div>
+    <h3>MARK</h3>
+    <mark>hello</mark>
+  </div>
+  <div>
+    <h3>SVG</h3>
+    <p>hello
+      <svg t="1599045520063" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="32076" width="128" height="128">
+        <path
+          d="M512 16C238 16 16 238 16 512s222 496 496 496 496-222 496-496S786 16 512 16z m160 304c35.4 0 64 28.6 64 64s-28.6 64-64 64-64-28.6-64-64 28.6-64 64-64z m-320 0c35.4 0 64 28.6 64 64s-28.6 64-64 64-64-28.6-64-64 28.6-64 64-64z m176 544h-32c-146.8 0-268-110-285.8-252-2.4-19 12.6-36 31.8-36h540c19.2 0 34.2 16.8 31.8 36-17.8 142-139 252-285.8 252z"
+          fill="" p-id="32077"></path>
+      </svg>
+    </p>
+  </div>
+  <div>
+    <h3>BLOCKQUOTE</h3>
+    <blockquote>Nice</blockquote>
+  </div>
+  <div>
+    <h3>CODE</h3>
+    <code>class Object{}</code>
+  </div>
+  <div>
+    <h3>TIME</h3>
+    <time>2020-09-02</time>
+  </div>
+  <div>
+    <h3>SAMP</h3>
+    <samp>SAMP</samp>
+  </div>
+  <div>
+    <h3>VAR</h3>
+    <var>abc</var>
+  </div>
+  <div>
+    <h3>KBD</h3>
+    <kbd>KBD</kbd>
+  </div>
+  <div>
+    <h3>INPUT</h3>
+    <input type="checkbox" id="checkbox" name="" value="" />
+    <label for="checkbox">Checkbox1</label>
+    <input type="radio" id="radio" name="" value="" />
+    <label for="radio">Radio1</label>
+    <input type="color" />
+    <input type="range" />
+    <input type="date" />
+    <input type="submit" />
+  </div>
+  <div>
+    <h3>TEXTAREA</h3>
+    <textarea style="width: 300px; height: 200px; overflow-x: visible; white-space: nowrap;"
+      placeholder="wirte something..."></textarea>
+  </div>
+  <div>
+    <h3>DETAILS:SUMMARY</h3>
+    <details>
+      <summary>Details</summary>
+      github: https://github.com/ThreeTenth/css-theme
+    </details>
+  </div>
+  <div>
+    <h3>FIELDSET</h3>
+    <fieldset>
+      <legend>lengend</legend>Fieldset balabalabalabala
+    </fieldset>
+  </div>
+  <div>
+    <h3>FOOTER</h3>
+    <footer>css-theme by ThreeTenth @2020</footer>
+  </div>
+
+  <script>
+    var div = document.getElementById("css-theme")
+    var themes = [
+      "navy",
+      "aqua",
+      "teal",
+      "olive",
+      "lime",
+      "fuchsia",
+      "purple",
+      "maroon",
+      "yellow",
+      "green",
+      "blue",
+      "orange",
+      "red",
+      "white",
+      "silver",
+      "grey",
+      "black"
+    ]
+    var currentTheme = themes[0]
+    themes.forEach(theme => {
+      var el = document.createElement("div")
+      el.setAttribute("style", "background-color: var(--" + theme + ")")
+      el.onclick = function () {
+        currentTheme = theme
+        document.body.className = (accent.checked ? "accent " : "") + currentTheme
+      }
+      div.appendChild(el)
+    });
+
+    var accent = document.createElement("input")
+    accent.setAttribute("type", "checkbox")
+    accent.onclick = function () {
+      document.body.className = (accent.checked ? "accent " : "") + currentTheme
+    }
+    div.appendChild(accent)
+  </script>
+</body>
+
+</html>
