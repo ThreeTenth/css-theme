@@ -65,13 +65,13 @@ input, details, details:active {
   outline: none;
 }
 
-button, input {
+button, input[type="button"] {
   background-color: var(--fg-c);
   color: var(--bg-c);
   border-color: var(--fg-c);
 }
 
-button.accent, input.accent {
+button.accent, input[type="date"].accent {
   background-color: var(--bg-c);
   color: var(--fg-c);
   border-color: var(--bg-c);
